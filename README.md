@@ -1,59 +1,58 @@
-Retail Sales Forecasting
+🛍️ Sales Forecasting Dashboard
+📊 Overview
 
-Overview
+This project aims to build a predictive analytics dashboard that helps retail businesses forecast their future sales using historical transaction data. The model leverages Facebook Prophet for time series forecasting and generates predictions, performance metrics, and business insights.
 
-This project builds a predictive analytics dashboard to help retail businesses forecast future sales trends using historical transaction data. The model uses Facebook Prophet for time series forecasting, and the results are visualized in an interactive Power BI dashboard.
+🔑 Features:
 
-Features
+Sales Forecasting: Predict future sales using historical data.
 
-Sales Forecasting: Predict future sales based on historical data.
+Monthly & Yearly Comparisons: Visualize trends across different time periods.
 
-Monthly & Yearly Comparisons: Visualize sales trends across different time periods.
+Business Insights: Extract key insights such as the highest/lowest sales months and sales trends.
 
-Business Insights: Extract actionable insights like top-selling items, best/worst months, and sales trends.
+Interactive Dashboard: Visualize forecasted data with charts and insights in Power BI.
 
-Interactive Dashboard: Display actual vs. forecasted data, insights, and comparisons in Power BI.
+🧰 Tools Used:
 
-Tools Used
+Facebook Prophet: For time series forecasting.
 
-Python: For model building and data analysis (Prophet, Pandas, Scikit-learn).
+Python: For data processing and model building.
 
-Power BI: For creating an interactive and shareable dashboard.
+Power BI: For building interactive dashboards.
 
 Jupyter Notebook: For exploratory data analysis (EDA) and visualizations.
 
-Facebook Prophet: A time series forecasting tool.
+Pandas & Matplotlib: For data manipulation and charting.
 
-Excel: (Optional) For data preprocessing and cleaning.
+📁 Project Files:
 
-Files
+forecast.py: Python script for training the forecasting model (Prophet), generating insights, and saving results.
 
-forecast.py: Python script for training the forecasting model and generating insights.
+sample_data.csv: Sample retail sales data (date, sales).
 
-sample_data.csv: Sample retail sales data (columns: date, sales).
+artifacts/: Folder containing output files:
 
-artifacts/: Folder containing the following output files:
+forecast_overall.csv → Forecast data.
 
-forecast_overall.csv: Forecasted sales data.
+metrics_overall.csv → Model evaluation metrics (MAE, RMSE).
 
-metrics_overall.csv: Model evaluation metrics (MAE, RMSE).
+forecast_overall.png → Sales forecast plot (actual vs predicted).
 
-forecast_overall.png: Actual vs forecasted sales plot.
+monthly_sales_overall.png → Monthly sales comparison.
 
-monthly_sales_overall.png: Monthly sales comparison chart.
+yearly_sales_overall.png → Yearly sales comparison.
 
-yearly_sales_overall.png: Yearly sales comparison chart.
+insights_overall.txt → Business insights for decision-making.
 
-insights_overall.txt: Text file with business insights.
-
-How to Run
+💻 How to Run:
 
 Clone the repository:
 
 git clone https://github.com/Abhishek451807/sales-forecasting.git
 
 
-Install the required Python libraries:
+Install dependencies:
 
 pip install -r requirements.txt
 
@@ -63,24 +62,24 @@ Run the forecasting script:
 python forecast.py --data sample_data.csv --freq D --horizon 30 --outdir artifacts
 
 
---freq D: Use daily data.
+--freq D: Daily frequency for resampling data.
 
 --horizon 30: Forecast the next 30 days.
 
-Results
-
-The script generates:
-
-Forecasted values (forecast_overall.csv)
-
-Performance metrics (MAE, RMSE)
-
-Forecast plots and business insights saved in the artifacts/ folder.
-
-Future Improvements
+🌱 Future Improvements:
 
 Enhance the Power BI dashboard with more interactivity (filters by category, store, region).
 
-Implement other forecasting models like ARIMA or XGBoost for comparison.
+Implement advanced forecasting models like XGBoost or ARIMA.
 
-Include insights like marketing campaign impacts or inventory prediction.
+Include additional business insights like marketing campaign impact or inventory prediction.
+
+📈 Results:
+
+The model will generate the following files in the artifacts/ folder:
+
+Forecasted values (forecast_overall.csv).
+
+Performance metrics (MAE, RMSE) in metrics_overall.csv.
+
+Visuals: line charts, bar charts, and insights cards saved as images.
